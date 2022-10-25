@@ -54,20 +54,35 @@ sendMail.addEventListener('click',
         
         const mailDataBase = ["user1@mail.com", "user2@mail.com", "user3@mail.com", "user4@mail.com", "user5@mail.com"];
 
+        // for (let i=0; i < mailDataBase.length; i++) {
+
+        //     if (mailUser === mailDataBase[i]) {
+        //         document.getElementById('test-2').innerHTML = 'The email is in the database';
+        //     } 
+
+        //     else {
+        //         document.getElementById('test-2').innerHTML = `Yours email is: ${mailUser}`;
+        //     }
+
+        // }
+
+        let mailChecked = true;
+
         for (let i=0; i < mailDataBase.length; i++) {
 
-            // mailUser == mailDataBase[i]
-
-            if (mailUser === mailDataBase[i]) {
-                document.getElementById('test-2').innerHTML = 'The email is in the database';
-            } 
-
-            else {
-                document.getElementById('test-2').innerHTML = `Yours email is: ${mailUser}`;
+            if (mailUser == mailDataBase[i]) {
+                mailChecked = false;
             }
 
         }
 
+        if (mailChecked == false) {
+            document.getElementById('test-2').innerHTML = 'The email is in the database';
+        } 
+
+        else {
+            document.getElementById('test-2').innerHTML = `Yours email is: ${mailUser}`;
+        }
         
     }
 
