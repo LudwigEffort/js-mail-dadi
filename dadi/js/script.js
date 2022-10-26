@@ -10,8 +10,8 @@ rollDice.addEventListener('click',
 
     function () {
 
-        let usrNum = Math.floor((Math.random() * 10) + 1);
-        let skyNum = Math.floor((Math.random() * 10) + 1);
+        let usrNum = Math.floor((Math.random() * 6) + 1);
+        let skyNum = Math.floor((Math.random() * 6) + 1);
 
         document.getElementById('userNumber').innerHTML = usrNum;
         document.getElementById('skynetNumber').innerHTML = (skyNum);
